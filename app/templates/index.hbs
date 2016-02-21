@@ -1,0 +1,17 @@
+
+<h2>Giftr</h2>
+
+{{#each model as |gift|}}
+    <h3>{{gift.recipient}}</h3>
+    <ul>
+        <li>Creator: {{gift.creator}}</li>
+        <li>Items</li>
+        <ul>
+            {{#each gift.items as |item|}}
+            <li>{{gift.name}}</li>
+            {{/each}}    
+        </ul>
+    </ul>
+{{/each}}
+
+{{outlet}}
