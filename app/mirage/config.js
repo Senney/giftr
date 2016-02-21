@@ -1,33 +1,47 @@
 export default function() {
 
-    this.get('/gifts', function() {
+    this.get('/gifts', function(db, request) {
         return {
             data: [{
-                type: 'gifts',
-                id: 1,
+                type: "gifts",
+                id: "1",
                 attributes: {
-                    recipient: 'John Doe',
                     creator: 'Brandon Wong',
-                    participants: [],
-                    items: [
-                        {
-                            
-                        }   
-                    ]
+                    recipient: 'Sean Heintz',
+                    participents: [],
+                    complete: false,
+                    
+                },
+                relationships: {
+                    "items": {
+                        "data": [
+                            {
+                                type: "gift-item",
+                                attributes: {
+                                    id: 1,
+                                    name: 'Toothbrush',
+                                    cost: 10.25,
+                                    gift: 1
+                                }
+                            }
+                        ]
+                    }
                 }
             }]
         };
     });
     
-    this.get('/gifts/:id/items', function() {
+    this.get('/gift-items', function(db, requests) {
         return {
-            type: 'items',
-            id: 1,
-            attributes: {
-                name: 'Brick of Cocaine',
-                cost: 1300.25,
-                gift: 1
-            }
+            "data": [{
+                id: 1,
+                type: "gift-item",
+                attributes: {
+                    name: 'Toothbrush',
+                    cost: 10.25,
+                    gift: 1
+                }
+            }]
         };
     });
 

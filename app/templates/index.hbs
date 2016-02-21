@@ -5,10 +5,11 @@
     <h3>{{gift.recipient}}</h3>
     <ul>
         <li>Creator: {{gift.creator}}</li>
+        <li>Recipient: {{gift.recipient}}</li>
         <li>Items</li>
         <ul>
             {{#each gift.items as |item|}}
-            <li>{{gift.name}}</li>
+            <li>{{item}}</li>
             {{/each}}    
         </ul>
     </ul>
