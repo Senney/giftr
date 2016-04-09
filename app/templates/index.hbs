@@ -9,7 +9,10 @@
         <li>Items</li>
         <ul>
             {{#each gift.items as |item|}}
-            <li>{{item}}</li>
+            <li>{{item.id}}</li>
+            <li>{{item.name}}</li>
+            <li>{{item.cost}}</li>
+            <li>{{item.gift}}</li>
             {{/each}}
         </ul>
     </ul>
