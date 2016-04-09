@@ -10,9 +10,10 @@
         <ul>
             {{#each gift.items as |item|}}
             <li>{{item}}</li>
-            {{/each}}    
+            {{/each}}
         </ul>
     </ul>
 {{/each}}
 
 {{outlet}}
+{{#link-to "about"}}About{{/link-to}}
