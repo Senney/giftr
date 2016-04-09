@@ -8,9 +8,9 @@ export default function() {
                 attributes: {
                     creator: 'Brandon Wong',
                     recipient: 'Sean Heintz',
-                    participents: [],
+                    participants: [],
                     complete: false,
-                    
+
                 },
                 relationships: {
                     "items": {
@@ -30,7 +30,7 @@ export default function() {
             }]
         };
     });
-    
+
     this.get('/gift-items', function(db, requests) {
         return {
             "data": [{
